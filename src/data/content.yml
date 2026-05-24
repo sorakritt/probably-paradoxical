@@ -1,0 +1,161 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# content.yml — Single source of truth for all site content
+# ─────────────────────────────────────────────────────────────────────────────
+# Edit this file to update text, stages, cards, social embeds, and the
+# guidelines document WITHOUT touching any Vue component.
+# HMR (hot reload) works in dev; production requires a rebuild.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Event meta ─────────────────────────────────────────────────────────────
+event:
+  name: "Probably Paradoxical"
+  tagline: "A team-based statistical paradox exploration event"
+  edition: "Paradox'26 · IIT Madras"
+  # Footer copyright line — edit the text here
+  copyright: "Probably Paradoxical team"
+
+# ── Header navigation links ────────────────────────────────────────────────
+nav:
+  links:
+    - label: Guidelines
+      to: /guidelines
+    - label: Timeline
+      to: /timeline
+    - label: Teams
+      to: /teams
+    - label: Judges
+      to: /judges
+
+# ── Hero section ───────────────────────────────────────────────────────────
+hero:
+  eyebrow: "Paradox'26 · IIT Madras"
+  heading: "Probably Paradoxical"
+  subtitle: "A team-based statistical paradox exploration event at Paradox'26, IIT Madras."
+  description: >
+    Teams select a statistical paradox, design a survey, collect real campus
+    data, run analysis, and present findings to a panel of judges — across
+    five stages.
+  stats:
+    - value: "3"
+      label: Days
+    - value: "5"
+      label: Stages
+    - value: Team
+      label: Based
+    - value: Data
+      label: "+ Analysis"
+
+# ── Event overview cards ───────────────────────────────────────────────────
+# icon must be a valid @mdi/js export name (camelCase, no mdi prefix needed here
+# — eventData.js maps them). Allowed: mdiMagnify, mdiChartBar,
+# mdiTableLarge, mdiPresentationPlay
+overview:
+  eyebrow: "What happens"
+  heading: "Event Overview"
+  subheading: >
+    A structured, data-driven competition that takes teams from raw curiosity
+    to evidence-based insight.
+  cards:
+    - icon: mdiMagnify
+      title: "Choose a Paradox"
+      description: >
+        Each team selects a statistical paradox — Simpson's, Berkson's,
+        Gambler's Fallacy, and more — as the lens for their entire investigation.
+    - icon: mdiChartBar
+      title: "Design & Survey"
+      description: >
+        Teams design a questionnaire, plan sampling strategies, and collect real
+        campus data from the IIT Madras community over a defined window.
+    - icon: mdiTableLarge
+      title: "Clean & Analyse"
+      description: >
+        Raw data is cleaned, coded, and run through statistical analysis —
+        distributions, hypothesis tests, and correlation structures.
+    - icon: mdiPresentationPlay
+      title: "Present Findings"
+      description: >
+        Teams present to a panel of judges, demonstrating how their paradox
+        manifested (or didn't) in the real-world data they collected.
+
+# ── Timeline stages ────────────────────────────────────────────────────────
+# status: completed | active | upcoming
+timeline:
+  eyebrow: "Five stages"
+  heading: "Event Timeline"
+  subheading: "From problem statement to final presentation."
+  stages:
+    - stage: 0
+      title: "Problem Statement Release"
+      description: >
+        The event brief and list of eligible paradoxes are published. Teams
+        study the domain and form their research hypothesis.
+      status: completed
+
+    - stage: 1
+      title: "Theme & Questionnaire Design"
+      description: >
+        Teams submit their chosen paradox, target population, and finalised
+        questionnaire for review before data collection begins.
+      status: active
+
+    - stage: 2
+      title: "Data Collection"
+      description: >
+        Teams deploy surveys across the IIT Madras campus. Minimum response
+        thresholds must be met within the allotted time window.
+      status: upcoming
+
+    - stage: 3
+      title: "Data Cleaning & Analysis"
+      description: >
+        Collected data is cleaned, coded, and analysed. Teams document
+        methodology, assumptions, and any anomalies encountered.
+      status: upcoming
+
+    - stage: 4
+      title: "Final Presentation"
+      description: >
+        Teams present findings to judges, including statistical results,
+        visualisations, and a reflection on whether the paradox was observed.
+      status: upcoming
+
+# ── Guidelines document ────────────────────────────────────────────────────
+# Paste your Google Doc share link here and the page auto-embeds it.
+# Accepted formats:
+#   https://docs.google.com/document/d/DOC_ID/edit
+#   https://docs.google.com/document/d/DOC_ID/edit?usp=sharing
+#   https://docs.google.com/document/d/DOC_ID/view
+#   https://docs.google.com/document/d/DOC_ID/pub
+# Leave googleDocUrl empty ("") to show the "coming soon" placeholder.
+guidelines:
+  googleDocUrl: ""
+
+# ── Social feed embeds ─────────────────────────────────────────────────────
+# Add embed URLs for Instagram posts, YouTube videos, and LinkedIn posts.
+# The home page renders them in a 3-column carousel.
+#
+# How to get embed URLs:
+#   Instagram : https://www.instagram.com/p/{POST_SHORTCODE}/embed/
+#               (replace {POST_SHORTCODE} with the code in the post URL)
+#   YouTube   : https://www.youtube.com/embed/{VIDEO_ID}
+#               (replace {VIDEO_ID} with the 11-char ID from the watch URL)
+#   LinkedIn  : https://www.linkedin.com/embed/feed/update/urn:li:share:{SHARE_ID}
+#               (get SHARE_ID from the LinkedIn share URL)
+#
+# Leave embedUrl as "" to show a branded placeholder card instead.
+# Add more items to the list — the carousel pages through them in groups of 3.
+social:
+  heading: "Follow the Event"
+  subheading: "Announcements, highlights, and updates from Paradox'26."
+  feeds:
+    - platform: instagram
+      label: "Latest from Instagram"
+      embedUrl: ""
+
+    - platform: youtube
+      label: "Event Highlight"
+      embedUrl: ""
+
+    - platform: linkedin
+      label: "LinkedIn Update"
+      embedUrl: ""
