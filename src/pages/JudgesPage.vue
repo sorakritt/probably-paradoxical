@@ -5,13 +5,13 @@ import SectionHeader from '../components/common/SectionHeader.vue'
 
 <template>
   <PublicLayout>
-    <section class="max-w-7xl mx-auto px-6 sm:px-8 py-10 md:py-14">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
       <SectionHeader
         eyebrow="Panel"
         heading="Judges"
         subheading="The judging panel will be announced before Stage 1."
       />
-      <div class="mt-8 border border-dashed border-neutral-300 bg-neutral-50 h-52 flex items-center justify-center">
+      <div class="mt-8 border border-dashed border-neutral-300 bg-neutral-50 min-h-48 flex items-center justify-center py-10">
         <p class="text-sm text-neutral-400">Judge profiles coming soon.</p>
       </div>
     </section>

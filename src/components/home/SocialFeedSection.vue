@@ -12,21 +12,18 @@ import config from '../../data/content.yml'
 
 const { heading, subheading, feeds } = config.social
 
-/** Platform display metadata — icons + labels, all black/white */
 const platformMeta = {
   instagram: { icon: mdiInstagram, label: 'Instagram' },
   youtube:   { icon: mdiYoutube,   label: 'YouTube'   },
   linkedin:  { icon: mdiLinkedin,  label: 'LinkedIn'  },
 }
 
-// ── Carousel state ─────────────────────────────────────────────────────────
 const PER_PAGE   = 3
 const page       = ref(0)
 const totalPages = computed(() => Math.ceil(feeds.length / PER_PAGE))
 const canPrev    = computed(() => page.value > 0)
 const canNext    = computed(() => page.value < totalPages.value - 1)
 
-/** IDs of feeds visible on the current page */
 const pageFeeds = computed(() =>
   feeds.slice(page.value * PER_PAGE, (page.value + 1) * PER_PAGE)
 )
@@ -37,17 +34,17 @@ function next() { if (canNext.value) page.value++ }
 
 <template>
   <section class="py-10 md:py-12 border-t border-neutral-200">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <!-- ── Section header + carousel controls ── -->
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-8">
+      <!-- Section header + carousel controls -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6 sm:mb-8">
         <SectionHeader :heading="heading" :subheading="subheading" />
 
         <div v-if="totalPages > 1" class="flex items-center gap-2 shrink-0">
           <button
             :disabled="!canPrev"
             aria-label="Previous"
-            class="w-8 h-8 flex items-center justify-center border border-neutral-300 transition-colors hover:border-neutral-950 disabled:opacity-30 disabled:cursor-not-allowed"
+            class="w-11 h-11 flex items-center justify-center border border-neutral-300 transition-colors hover:border-neutral-950 disabled:opacity-30 disabled:cursor-not-allowed"
             @click="prev"
           >
             <svg viewBox="0 0 24 24" class="w-4 h-4" aria-hidden="true">
@@ -62,7 +59,7 @@ function next() { if (canNext.value) page.value++ }
           <button
             :disabled="!canNext"
             aria-label="Next"
-            class="w-8 h-8 flex items-center justify-center border border-neutral-300 transition-colors hover:border-neutral-950 disabled:opacity-30 disabled:cursor-not-allowed"
+            class="w-11 h-11 flex items-center justify-center border border-neutral-300 transition-colors hover:border-neutral-950 disabled:opacity-30 disabled:cursor-not-allowed"
             @click="next"
           >
             <svg viewBox="0 0 24 24" class="w-4 h-4" aria-hidden="true">
@@ -72,15 +69,15 @@ function next() { if (canNext.value) page.value++ }
         </div>
       </div>
 
-      <!-- ── 3-column feed grid ── -->
+      <!-- Feed grid: 1-col mobile → 2-col tablet → 3-col desktop -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-200 border border-neutral-200">
         <article
           v-for="(feed, idx) in pageFeeds"
           :key="`${page}-${idx}`"
           class="bg-white flex flex-col"
         >
-          <!-- Platform bar -->
-          <header class="flex items-center gap-2 px-4 py-2.5 border-b border-neutral-100">
+          <!-- Platform header bar -->
+          <header class="flex items-center gap-2 px-4 py-3 border-b border-neutral-100">
             <svg viewBox="0 0 24 24" class="w-4 h-4 text-neutral-950 shrink-0" aria-hidden="true">
               <path fill="currentColor" :d="platformMeta[feed.platform]?.icon" />
             </svg>
@@ -89,14 +86,16 @@ function next() { if (canNext.value) page.value++ }
             </span>
             <span
               v-if="feed.label"
-              class="ml-auto text-xs text-neutral-400 truncate max-w-[140px]"
+              class="ml-auto text-xs text-neutral-400 truncate max-w-32"
             >
               {{ feed.label }}
             </span>
           </header>
 
-          <!-- Embed iframe -->
-          <div class="relative flex-1 h-[450px]">
+          <!-- Embed area:
+               Shorter on mobile (h-72 = 288px) to avoid a single card
+               consuming the entire screen; taller on sm+ (h-[450px]) -->
+          <div class="relative flex-1 h-72 sm:h-112.5">
             <iframe
               v-if="feed.embedUrl"
               :src="feed.embedUrl"
@@ -107,7 +106,6 @@ function next() { if (canNext.value) page.value++ }
               allowfullscreen
             />
 
-            <!-- Placeholder when no URL is configured -->
             <div
               v-else
               class="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-neutral-50 px-6 text-center"
@@ -128,14 +126,19 @@ function next() { if (canNext.value) page.value++ }
         </article>
       </div>
 
-      <!-- ── Dot indicators (shown when > 1 page) ── -->
-      <div v-if="totalPages > 1" class="flex justify-center gap-1.5 mt-5" role="tablist" aria-label="Carousel pages">
+      <!-- Dot indicators -->
+      <div
+        v-if="totalPages > 1"
+        class="flex justify-center gap-2 mt-5"
+        role="tablist"
+        aria-label="Carousel pages"
+      >
         <button
           v-for="n in totalPages"
           :key="n"
           :aria-label="`Page ${n}`"
           :aria-selected="page === n - 1"
-          class="w-1.5 h-1.5 rounded-full transition-colors"
+          class="w-2 h-2 rounded-full transition-colors"
           :class="page === n - 1 ? 'bg-neutral-950' : 'bg-neutral-300 hover:bg-neutral-500'"
           @click="page = n - 1"
         />

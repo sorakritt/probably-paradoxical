@@ -7,18 +7,18 @@ import { timelineStages } from '../data/eventData.js'
 
 <template>
   <PublicLayout>
-    <section class="max-w-7xl mx-auto px-6 sm:px-8 py-10 md:py-14">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
       <SectionHeader
         eyebrow="Five stages"
         heading="Full Event Timeline"
         subheading="Stage-by-stage breakdown of the competition from problem release to final presentation."
       />
 
-      <ol class="relative border-l-2 border-neutral-200 ml-3 sm:ml-4 mt-10 space-y-0">
+      <ol class="relative border-l-2 border-neutral-200 ml-3 mt-10 space-y-0">
         <li
           v-for="stage in timelineStages"
           :key="stage.stage"
-          class="relative pl-7 pb-9 last:pb-0"
+          class="relative pl-6 pb-9 last:pb-0"
         >
           <span
             class="absolute -left-2.25 top-0.5 w-4 h-4 rounded-full border-2 flex items-center justify-center text-[9px] font-bold"
@@ -31,10 +31,14 @@ import { timelineStages } from '../data/eventData.js'
           >{{ stage.stage }}</span>
 
           <div class="flex flex-wrap items-center gap-2 mb-1.5">
-            <h3 class="text-sm font-bold text-neutral-950">Stage {{ stage.stage }}: {{ stage.title }}</h3>
+            <h3 class="text-sm font-bold text-neutral-950">
+              Stage {{ stage.stage }}: {{ stage.title }}
+            </h3>
             <StatusBadge :status="stage.status" />
           </div>
-          <p class="text-sm text-neutral-500 leading-relaxed max-w-2xl">{{ stage.description }}</p>
+          <p class="text-sm text-neutral-500 leading-relaxed max-w-2xl">
+            {{ stage.description }}
+          </p>
         </li>
       </ol>
     </section>

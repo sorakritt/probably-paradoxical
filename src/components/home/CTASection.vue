@@ -4,8 +4,8 @@ import BaseButton from '../common/BaseButton.vue'
 
 <template>
   <section class="py-10 md:py-12 border-t border-neutral-200">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6 py-8 px-6 border border-neutral-950 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 py-8 px-4 sm:px-6 border border-neutral-950 bg-white">
 
         <div class="max-w-lg text-center md:text-left">
           <p class="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-1.5">Get started</p>
@@ -18,9 +18,14 @@ import BaseButton from '../common/BaseButton.vue'
           </p>
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-3 shrink-0">
-          <BaseButton variant="primary" to="/login">Go to Team Login</BaseButton>
-          <BaseButton variant="outline" to="/guidelines">Read the Guidelines</BaseButton>
+        <!-- Buttons — full-width stacked on mobile, auto side-by-side on sm+ -->
+        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
+          <BaseButton variant="primary" to="/login" class="w-full sm:w-auto">
+            Go to Team Login
+          </BaseButton>
+          <BaseButton variant="outline" to="/guidelines" class="w-full sm:w-auto">
+            Read the Guidelines
+          </BaseButton>
         </div>
 
       </div>

@@ -9,7 +9,7 @@
 # ── Event meta ─────────────────────────────────────────────────────────────
 event:
   name: "Probably Paradoxical"
-  tagline: "A team-based statistical paradox exploration event"
+  tagline: "Thinnk it is obvious? Prove it with data."
   edition: "Paradox'26 · IIT Madras"
   # Footer copyright line — edit the text here
   copyright: "Probably Paradoxical team"

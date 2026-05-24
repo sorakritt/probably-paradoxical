@@ -5,8 +5,11 @@
     font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* prevent any component from causing horizontal scroll on mobile */
+    overflow-x: hidden;
   }
   body {
     @apply bg-white text-neutral-950;
+    overflow-x: hidden;
   }
 }

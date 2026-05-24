@@ -1,8 +1,6 @@
 <script setup>
 defineProps({
-  /**
-   * 'primary' | 'outline' | 'ghost'
-   */
+  /** 'primary' | 'outline' | 'ghost' */
   variant: {
     type: String,
     default: 'primary',
@@ -36,7 +34,7 @@ const variantClasses = {
     :to="to"
     :href="href"
     :disabled="disabled || undefined"
-    class="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-40 disabled:cursor-not-allowed"
+    class="inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold rounded-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-40 disabled:cursor-not-allowed min-h-11"
     :class="variantClasses[variant]"
   >
     <slot />

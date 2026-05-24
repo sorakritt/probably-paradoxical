@@ -1,11 +1,14 @@
 <script setup>
 import StatCard from '../common/StatCard.vue'
 import BaseButton from '../common/BaseButton.vue'
-import { heroStats } from '../../data/eventData.js'
+import config from '../../data/content.yml'
+
+const { hero, event } = config
+const heroStats = hero.stats
 </script>
 
 <template>
-  <section class="relative py-14 md:py-20 overflow-hidden">
+  <section class="relative py-12 md:py-20 overflow-hidden">
 
     <!-- Subtle dot grid -->
     <div class="absolute inset-0 -z-10 opacity-[0.05] pointer-events-none" aria-hidden="true">
@@ -19,39 +22,47 @@ import { heroStats } from '../../data/eventData.js'
       </svg>
     </div>
 
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 flex flex-col items-center text-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
 
       <!-- Eyebrow -->
-      <div class="inline-flex items-center gap-2 px-3 py-1 border border-neutral-300 mb-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 border border-neutral-300 mb-5">
         <span class="text-xs font-semibold uppercase tracking-widest text-neutral-500">
-          Paradox'26 · IIT Madras
+          {{ hero.eyebrow }}
         </span>
       </div>
 
-      <!-- Heading -->
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-neutral-950 tracking-tight leading-tight max-w-3xl">
-        Probably<br class="hidden sm:block" /> Paradoxical
+      <!-- Heading — scales down on small phones to prevent wrapping overflow -->
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold text-neutral-950 tracking-tight leading-tight max-w-3xl">
+        {{ hero.heading }}
       </h1>
 
+      <!-- Tagline — from event.tagline in content.yml -->
+      <p class="mt-4 text-base sm:text-xl font-semibold text-neutral-950 max-w-sm sm:max-w-xl tracking-tight leading-snug">
+        {{ event.tagline }}
+      </p>
+
       <!-- Subtitle -->
-      <p class="mt-3 text-base text-neutral-500 font-medium max-w-xl">
-        A team-based statistical paradox exploration event at Paradox'26, IIT Madras.
+      <p class="mt-2 text-sm text-neutral-500 max-w-sm sm:max-w-xl">
+        {{ hero.subtitle }}
       </p>
 
       <!-- Description -->
-      <p class="mt-3 text-sm text-neutral-400 max-w-xl leading-relaxed">
-        Teams select a statistical paradox, design a survey, collect real campus data,
-        run analysis, and present findings to a panel of judges — across five stages.
+      <p class="mt-3 text-sm text-neutral-400 max-w-sm sm:max-w-xl leading-relaxed">
+        {{ hero.description }}
       </p>
 
-      <!-- CTAs -->
-      <div class="mt-7 flex flex-col sm:flex-row gap-3">
-        <BaseButton variant="primary" to="/guidelines">View Guidelines</BaseButton>
-        <BaseButton variant="outline" to="/login">Team Login</BaseButton>
+      <!-- CTAs — full-width when stacked on mobile, auto-width side-by-side on sm+ -->
+      <div class="mt-7 flex flex-col sm:flex-row gap-3 w-full max-w-xs sm:max-w-none sm:w-auto">
+        <BaseButton variant="primary" to="/guidelines" class="w-full sm:w-auto">
+          View Guidelines
+        </BaseButton>
+        <BaseButton variant="outline" to="/login" class="w-full sm:w-auto">
+          Team Login
+        </BaseButton>
       </div>
 
-      <!-- Stats row -->
-      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-px bg-neutral-200 border border-neutral-200 w-full max-w-xl">
+      <!-- Stats row — 2-up on mobile, 4-up on sm+ -->
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-px bg-neutral-200 border border-neutral-200 w-full max-w-xs sm:max-w-xl">
         <StatCard
           v-for="stat in heroStats"
           :key="stat.label"
