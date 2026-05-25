@@ -94,14 +94,14 @@ timeline:
       description: >
         The event brief and list of eligible paradoxes are published. Teams
         study the domain and form their research hypothesis.
-      status: completed
+      status: upcoming
 
     - stage: 1
       title: "Theme & Questionnaire Design"
       description: >
         Teams submit their chosen paradox, target population, and finalised
         questionnaire for review before data collection begins.
-      status: active
+      status: upcoming
 
     - stage: 2
       title: "Data Collection"
