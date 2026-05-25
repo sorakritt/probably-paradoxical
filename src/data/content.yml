@@ -31,6 +31,9 @@ hero:
   eyebrow: "Paradox'26 · IIT Madras"
   heading: "Probably Paradoxical"
   subtitle: "A team-based statistical paradox exploration event at Paradox'26, IIT Madras."
+  registrationLabel: "Register Now"
+  # Paste the registration form/page URL here to enable the hero registration button.
+  registrationUrl: "https://www.iitmparadox.org/events/technicals/71"
   description: >
     Teams select a statistical paradox, design a survey, collect real campus
     data, run analysis, and present findings to a panel of judges — across
@@ -40,10 +43,12 @@ hero:
       label: Days
     - value: "5"
       label: Stages
-    - value: Team
-      label: Based
-    - value: Data
-      label: "+ Analysis"
+    - value: 20+
+      label: Teams
+    - value: 50+
+      label: "Registrations"
+    - value: 10k+
+      label: "Prize Pool"
 
 # ── Event overview cards ───────────────────────────────────────────────────
 # icon must be a valid @mdi/js export name (camelCase, no mdi prefix needed here
@@ -128,7 +133,28 @@ timeline:
 #   https://docs.google.com/document/d/DOC_ID/pub
 # Leave googleDocUrl empty ("") to show the "coming soon" placeholder.
 guidelines:
-  googleDocUrl: ""
+  googleDocUrl: "https://docs.google.com/document/d/1XPNpa8oEWEkfbtQNZtVpS_Ha_IJ53IJIjQx_pkaGRs4/edit?usp=sharing"
+
+# ── Judges page ────────────────────────────────────────────────────────────
+# Add one entry under profiles for each judge. Leave imageUrl empty ("") to
+# render the photo placeholder.
+#
+# Example profile:
+#   - name: "Judge Name"
+#     role: "Designation, Organisation"
+#     bio: "A short introduction to the judge."
+#     imageUrl: "https://example.com/judge-photo.jpg"
+judges:
+  eyebrow: "Panel"
+  heading: "Judges"
+  subheading: "The judging panel will be announced before Stage 1."
+  emptyMessage: "Judge profiles coming soon."
+  imagePlaceholder: "Photo coming soon"
+  profiles:
+    - name: "Prof. Rahul R Marathe"
+      imageUrl: "https://wsai.iitm.ac.in/images/people/rrmarathe.webp"
+      role: "Affiliate Faculty, RBCDSAI / Professor, IIT Madras"
+      # bio: ""
 
 # ── Social feed embeds ─────────────────────────────────────────────────────
 # Add embed URLs for Instagram posts, YouTube videos, and LinkedIn posts.

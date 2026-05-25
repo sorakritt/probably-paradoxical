@@ -53,7 +53,15 @@ const heroStats = hero.stats
 
       <!-- CTAs — full-width when stacked on mobile, auto-width side-by-side on sm+ -->
       <div class="mt-7 flex flex-col sm:flex-row gap-3 w-full max-w-xs sm:max-w-none sm:w-auto">
-        <BaseButton variant="primary" to="/guidelines" class="w-full sm:w-auto">
+        <BaseButton
+          variant="primary"
+          :href="hero.registrationUrl"
+          :disabled="!hero.registrationUrl"
+          class="w-full sm:w-auto"
+        >
+          {{ hero.registrationLabel }}
+        </BaseButton>
+        <BaseButton variant="outline" to="/guidelines" class="w-full sm:w-auto">
           View Guidelines
         </BaseButton>
         <BaseButton variant="outline" to="/login" class="w-full sm:w-auto">
@@ -61,8 +69,8 @@ const heroStats = hero.stats
         </BaseButton>
       </div>
 
-      <!-- Stats row — 2-up on mobile, 4-up on sm+ -->
-      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-px bg-neutral-200 border border-neutral-200 w-full max-w-xs sm:max-w-xl">
+      <!-- Stats row — 2-up on mobile, all five side-by-side on sm+ -->
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-5 gap-px bg-neutral-200 border border-neutral-200 w-full max-w-xs sm:max-w-3xl">
         <StatCard
           v-for="stat in heroStats"
           :key="stat.label"
