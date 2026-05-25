@@ -1,0 +1,177 @@
+# Team roster data for the public Teams page.
+# Add each team using this format:
+#
+teams:
+
+  - teamName: "Alibaba4Chor"
+    teamId: "T01" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Nimish Shinde (DS)"
+        email: "23f2002121@ds.study.iitm.ac.in"
+      - name: "Member Two"
+        email: "23f1002786@ds.study.iitm.ac.in"
+      - name: "Member Three"
+        email: "23f2002121@ds.study.iitm.ac.in"
+      - name: "Member Four"
+        email: "23f2004210@ds.study.iitm.ac.in"
+      - name: "Member Five"
+        email: "24f3002711@ds.study.iitm.ac.in"
+
+  - teamName: "AnalystKing"
+    teamId: "T02" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Gnanaprakash R (DS)"
+        email: "24ds2000021@ds.study.iitm.ac.in"
+      - name: "Member Two"
+        email: "22f3000144@ds.study.iitm.ac.in"
+      - name: "Member Three"
+        email: "24ds2000033@ds.study.iitm.ac.in"
+      - name: "Member Four"
+        email: "24f2007783@ds.study.iitm.ac.in"
+
+  - teamName: "Chanakya"
+    teamId: "T03" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Member One"
+        email: "member.one@example.com"
+      - name: "Member Two"
+        email: "member.two@example.com"
+  
+  - teamName: "Codorithm"
+    teamId: "T04" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Member One"
+        email: "member.one@example.com"
+      - name: "Member Two"
+        email: "member.two@example.com"
+  
+  - teamName: "Data Panchayat"
+    teamId: "T05" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Member One"
+        email: "member.one@example.com"
+      - name: "Member Two"
+        email: "member.two@example.com"
+  
+  - teamName: "DataPulse"
+    teamId: "T06" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Member One"
+        email: "member.one@example.com"
+      - name: "Member Two"
+        email: "member.two@example.com"
+  
+  - teamName: "Innovait"
+    teamId: "T07" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Member One"
+        email: "member.one@example.com"
+      - name: "Member Two"
+        email: "member.two@example.com"
+
+  - teamName: "Kivy"
+    teamId: "T08" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Member One"
+        email: "member.one@example.com"
+      - name: "Member Two"
+        email: "member.two@example.com"
+
+  - teamName: "Matrix"
+    teamId: "T09" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Member One"
+        email: "member.one@example.com"
+      - name: "Member Two"
+        email: "member.two@example.com"
+
+  - teamName: "Pan Bros"
+    teamId: "T10" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Member One"
+        email: "member.one@example.com"
+      - name: "Member Two"
+        email: "member.two@example.com"
+  
+  - teamName: "Rahul"
+    teamId: "T11" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Member One"
+        email: "member.one@example.com"
+      - name: "Member Two"
+        email: "member.two@example.com"
+
+  - teamName: "Seedata"
+    teamId: "T12" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Member One"
+        email: "member.one@example.com"
+      - name: "Member Two"
+        email: "member.two@example.com"
+
+  - teamName: "Stat Stackers"
+    teamId: "T13" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Member One"
+        email: "member.one@example.com"
+      - name: "Member Two"
+        email: "member.two@example.com"
+
+  - teamName: "Tech Mavericks"
+    teamId: "T14" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Member One"
+        email: "member.one@example.com"
+      - name: "Member Two"
+        email: "member.two@example.com"
+
+  - teamName: "The Invincible Trident"
+    teamId: "T15" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Member One"
+        email: "member.one@example.com"
+      - name: "Member Two"
+        email: "member.two@example.com"
+
+  - teamName: "TMC"
+    teamId: "T16" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Member One"
+        email: "member.one@example.com"
+      - name: "Member Two"
+        email: "member.two@example.com"
+
+  - teamName: "None"
+    teamId: "T17" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Member One"
+        email: "member.one@example.com"
+      - name: "Member Two"
+        email: "member.two@example.com"
+
+  - teamName: "Unclusered"
+    teamId: "unclusered" # must be unique, lowercase, no spaces (use hyphens if needed)
+    members:
+      - name: "Abhay Pratap Singh (ES)"
+        email: "25f3100267@es.study.iitm.ac.in"
+      - name: "Member Two"
+        email: "member.two@example.com"
+
+  # - teamName: "Abhay"
+  #   teamId: "T14" # must be unique, lowercase, no spaces (use hyphens if needed)
+  #   members:
+  #     - name: "Member One"
+  #       email: " "
+  
+  # - teamName: "Tech Mavericks"
+  #   teamId: "T14" # must be unique, lowercase, no spaces (use hyphens if needed)
+  #   members:
+  #     - name: "Member One"
+  #       email: "member.one@example.com"
+  #     - name: "Member Two"
+  #       email: "member.two@example.com"
+
+
+# Update both timestamp fields whenever this roster changes.
+lastUpdated: "25 May 2026, 06:10 AM IST"
+lastUpdatedIso: "2026-05-25T06:10:49+05:30"

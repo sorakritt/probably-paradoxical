@@ -135,6 +135,15 @@ timeline:
 guidelines:
   googleDocUrl: "https://docs.google.com/document/d/1XPNpa8oEWEkfbtQNZtVpS_Ha_IJ53IJIjQx_pkaGRs4/edit?usp=sharing"
 
+# ── Teams page ─────────────────────────────────────────────────────────────
+# Team roster records and last-updated timestamp live in teamInfo.yml.
+teams:
+  eyebrow: "Participants"
+  heading: "Registered Teams"
+  subheading: "Team details will be listed here once registrations are confirmed."
+  emptyMessage: "Team list coming soon."
+  lastUpdatedLabel: "Last updated on"
+
 # ── Judges page ────────────────────────────────────────────────────────────
 # Add one entry under profiles for each judge. Leave imageUrl empty ("") to
 # render the photo placeholder.
